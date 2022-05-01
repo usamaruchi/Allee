@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="bs/bootstrap-4.2.1-dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-web/css/all.css">
+
+    <!-- https://alleeomotesando.jp/#sweets -->
+    <style>
+        * {
+            /* outline: 1px solid red; */
+        }
+
+        h3,
+        a,
+        p {
+            color: white;
+        }
+
+        .width-100 {
+            width: 100%;
+        }
+
+        .pd-20 {
+            padding-bottom: 20%;
+        }
+
+        /* ------------------------------------------ */
+
+        header {
+            /* background: linear-gradient(110deg, #6d311d 22%, #664a29 55%, #41342b 90%)no-repeat; */
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            height: 15vh;
+        }
+
+        .nav-logo img {
+            width: 100%;
+            height: 45px;
+        }
+
+        .nav-btn img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .nav-right ul li a,
+        .menu-p {
+            font-size: 18px;
+        }
+
+        .line1{
+            width: 0px;
+            height: 1px;
+            transition: .3s;
+        }
+
+        .nav-right ul :hover{
+            text-decoration: none;
+            color: #FFF;
+        }
+
+        .nav-right ul :hover .line1{
+            width: 29px;
+            height: 1px;
+            background-color: #FFF;
+        }
+
+        .menu-p {
+            font-size: 15px;
+        }
+
+        /* ------------------------------------------ */
+
+        .top {
+            background: linear-gradient(110deg, #6d311d 22%, #664a29 55%, #41342b 90%)no-repeat;
+            padding: 250px 0 0 0;
+            /* height: 100px; */
+            width: 100%;
+            /* height: 45vh; */
+        }
+
+        .top-wrap {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            height: 45vh;
+            /* overflow: hidden; */
+        }
+
+        .top-wrap-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .top-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .top-wrap-fliter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: auto;
+            height: 20%;
+            width: 100%;
+            max-width: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0), #000);
+        }
+
+        .top-p {
+            position: absolute;
+            top: -75px;
+            left: 65px;
+            writing-mode: vertical-rl;
+            font-size: 16px;
+            letter-spacing: 0.3rem;
+            line-height: 2.2;
+        }
+
+        /* ------------------------------------------ */
+        .story {
+
+            background: linear-gradient(290deg, #6d311d 22%, #664a29 55%, #41342b 90%)no-repeat;
+        }
+
+        .story1-wrap {
+            padding: 90px 0 70px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: end;
+
+        }
+
+        .story1-content {
+            width: 100%;
+            padding-left: 5%;
+        }
+
+        .story1-content p {
+            letter-spacing: 2px;
+            line-height: 2.2;
+        }
+
+        .story1-p1 {
+            font-size: 15px;
+            margin-bottom: 60px;
+        }
+
+        .story1-wrap-img {
+            width: 80%;
+        }
+
+        .story1-img,
+        .story2-img {
+            width: 100%;
+        }
+
+        /* --------------- */
+
+        .video-wrap p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .video-fliter {
+            display: flex;
+            position: absolute;
+            top: auto;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(255, 255, 255, 0), #41342b);
+            width: auto;
+            height: 100px;
+            max-width: 100%;
+        }
+
+        /* --------------- */
+        .story2-wrap {
+            background-color: #41342b;
+            /* background: url(./alleeomotesando_jp/s-2400x1552_v-frms_webp_64e0dcda-f270-46dd-8413-58ba7283e2f9_regular.webp); */
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            /* height: 500px; */
+
+        }
+
+        .story2-wrap-img {
+            width: 80%;
+        }
+
+        .story2-img {
+            width: 100%;
+        }
+
+        .story2-content {
+            width: 90%;
+            padding: 80px 50px 60px 50px;
+        }
+
+        .story2-p {
+            font-size: 14px;
+            line-height: 2.2;
+        }
+
+        /* -------------- */
+
+        .sweets-1,
+        .sweets-3,
+        .sweets-2,
+        .sweets-4 {
+            background-color: #41342b;
+        }
+
+        .sweets p {
+            /* font-size: 15px; */
+            letter-spacing: 0.15em;
+            line-height: 2.2;
+        }
+
+        .sweets-title-1 {
+            background: linear-gradient(110deg, #6d311d 22%, #664a29 55%, #41342b 90%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            height: 40vh;
+            font-size: 18px;
+            padding: 20px 50px;
+            /* width: 400px; */
+        }
+
+
+        .sweets-title-1-right {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .sweets-title-1-left {
+            width: 100%;
+        }
+
+        .sweets1-wrap-img {
+            width: 100%;
+            padding-bottom: 50px;
+        }
+
+        .sweets1-h3 {
+            width: 100%;
+        }
+
+        .sweets2-wrap {
+            padding: 30px 50px;
+        }
+
+        .sweets2-img {
+            width: 100%;
+            padding-bottom: 30px;
+        }
+
+        .sweets2-p {
+            width: 100%;
+            padding-right: 30px;
+        }
+
+        .sweets3-wrap-img {
+            width: 100%;
+            padding-bottom: 50px;
+        }
+
+        .sweets3-h3 {
+            width: 100%;
+        }
+
+        .sweets4-wrap {
+            padding: 30px 50px;
+        }
+
+        .sweets4-img {
+            width: 100%;
+            padding-bottom: 30px;
+        }
+
+        .sweets4-p {
+            width: 100%;
+            padding-right: 30px;
+        }
+
+        .sweets-title-2 {
+            position: relative;
+        }
+
+
+        .title-2-img-wrap {
+            position: relative;
+            width: 100%;
+            height: 260px;
+            filter: grayscale(60%);
+            overflow: hidden;
+        }
+
+        .title-2-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .title-2-img-fliter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            background-color: rgba(70, 45, 34, 0.7);
+        }
+
+        .title-2-h3 {
+            color: #FFF;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .allcakes-wrap {
+            color: #FFF;
+            background-color: #41342b;
+            width: 100%;
+            padding-bottom: 10%;
+        }
+
+        .cake-wrap {
+            width: 100%;
+        }
+
+        .cake-img-wrap {
+            width: 100%;
+            padding: 0 6%;
+        }
+
+        .cake-content {
+            width: 100%;
+            padding: 0 10%;
+        }
+
+        .cake-name {
+            padding: 30px 0 15px 0;
+        }
+
+        .cake-introduce {
+            padding-bottom: 15%;
+        }
+
+        /* ------------------------------------------ */
+
+        .title {
+            background: linear-gradient(240deg, #6d311d 22%, #664a29 55%, #41342b 90%);
+            width: 100%;
+            height: 30vh;
+
+            display: flex;
+            justify-content: center;
+
+            font-size: 16px;
+            color: #FFF;
+
+        }
+
+        .title-content {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+
+
+        .title-style {
+            width: 16px;
+            height: 1px;
+            background-color: #FFF;
+            margin-top: 20px;
+        }
+
+        .drink-title-right {
+            letter-spacing: 5px;
+        }
+
+
+        .types {
+            background-color: #41342b;
+            font-size: 14px;
+            color: #FFF;
+        }
+
+        .type-wrap {
+            width: 100%;
+        }
+
+        .type-content-wrap {
+            width: 100%;
+            /* padding: 13% 0 20% 0; */
+        }
+
+        .type-img-wrap {
+            padding-bottom: 13%;
+        }
+
+        .type-name {
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: 5px;
+        }
+
+        .type-content-wrap {
+            padding: 10%;
+            letter-spacing: 5px;
+        }
+
+        .introduce-img-wrap {
+            padding-bottom: 10%;
+        }
+
+        .drink-wrap {
+            width: 100%;
+        }
+
+        .type-introduce {
+            padding-right: 25%;
+            letter-spacing: 5px;
+        }
+
+        .drink-img-wrap {
+            width: 100%;
+            padding: 0 6%;
+        }
+
+        .drink-content {
+            width: 100%;
+            padding: 0 10%;
+        }
+
+        .drink-name {
+            padding: 30px 0 15px 0;
+        }
+
+        .drink-introduce {
+            padding-right: 35%;
+            padding-bottom: 20%;
+            letter-spacing: 5px;
+        }
+
+
+
+        /* ------------------------------------------ */
+
+        .fs-18 {
+            font-size: 18px;
+        }
+
+        .about {
+            background: linear-gradient(120deg, #6d311d 22%, #664a29 55%, #41342b 90%);
+            color: #FFF;
+            font-size: 14px;
+            padding: 20% 6% 8% 6%;
+        }
+
+        .shop,
+        .name {
+            padding-bottom: 30px;
+        }
+
+        .name {
+            font-size: 28px;
+        }
+
+        .name-sm {
+            font-size: 16px;
+            padding-left: 8px;
+        }
+
+        .adderss-wrap,
+        .contact-wrap {
+            padding-bottom: 30px;
+        }
+
+        .address-content,
+        .contact-info {
+            padding-left: 35px;
+            line-height: 2.2;
+            letter-spacing: 2.2px;
+        }
+
+
+        .shop-style {
+            width: 16px;
+            height: 1px;
+            background-color: #FFF;
+            margin-top: 20px;
+        }
+
+
+        .instagram{
+            background-color: #41342b;
+            color: white;
+            
+        }
+
+        .ig-img-wrap{
+            width: 80%;
+        }
+
+        .ig-info-wrap{
+            padding: 15% 8%;
+            width: 100%;
+        }
+
+        .ig-info{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           align-content: center;
+        }
+
+        .ig-p{
+            text-align: center;
+            width: 100%;
+            padding-bottom: 50px;
+        }
+
+        .ig-link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 260px;
+            height: 60px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: .2s;
+        }
+
+        .ig-link:hover{
+            color: rgb(70, 70, 70);
+            text-decoration: none;
+            background-color: #FFF;
+        }
+
+
+        .ig-link i{
+            font-size: 20px;
+        }
+
+        .link-p{
+            margin-left: 10px;
+        }
+
+        .button-logo{
+            background-color: #41342b;
+            color: #FFF;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo{
+            height: 80px;
+            padding-bottom: 10px;
+        }
+
+        .pb-20{
+            padding-bottom: 20px;
+        }
+
+        /* ------------------------------------------ */
+
+        @media screen and (min-width:540px) {
+            .row-re {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+
+            /* ---------------------- */
+
+            header {
+                height: 20vh;
+            }
+
+            .nav-logo img {
+                height: 60px;
+            }
+
+
+            /* ---------------------- */
+
+            .top-wrap {
+                height: 90vh;
+            }
+
+            .top-p {
+                top: -65px;
+                left: 80px;
+                font-size: 20px;
+            }
+
+            /* ----------------------- */
+
+            .story1-wrap {
+                justify-content: start;
+
+            }
+
+            .story1-content {
+                width: 50%;
+                padding-left: 5%;
+            }
+
+            .story1-wrap-img {
+                width: 50%;
+            }
+
+            .story2-wrap {
+                display: flex;
+                flex-wrap: nowrap;
+                width: 100%;
+                /* height: 500px; */
+                /* object-fit: cover; */
+            }
+
+            /* ---------------- */
+            .sweets-title-1 {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .sweets-title-1-right {
+                display: flex;
+                flex-direction: columnr;
+                width: 40%;
+            }
+
+            .sweets-title-1-left {
+                width: 60%;
+            }
+
+            .sweets-1 {
+                display: flex;
+                align-items: center;
+            }
+
+            .sweets1-wrap-img {
+                width: 60%;
+                padding-bottom: 0px;
+            }
+
+            .sweets1-h3 {
+                width: 40%;
+            }
+
+            .sweets2 {
+                /* padding: 10px 10px; */
+                display: flex;
+                justify-items: center;
+            }
+
+            .sweets2-wrap {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                width: 100%;
+                padding: 30px 50px;
+            }
+
+            .sweets2-img {
+                width: 50%;
+                padding-bottom: 0;
+            }
+
+            .sweets2-p {
+                width: 50%;
+                padding: 30px;
+            }
+
+            .sweets-3 {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+            }
+
+            .sweets3-wrap-img {
+                width: 60%;
+                padding-bottom: 0px;
+            }
+
+            .sweets3-h3 {
+                width: 40%;
+            }
+
+            .sweets4 {
+                /* padding: 10px 10px; */
+                display: flex;
+                justify-items: center;
+            }
+
+            .sweets4-wrap {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                padding: 30px 50px;
+            }
+
+            .sweets4-img {
+                width: 50%;
+                padding-bottom: 0;
+            }
+
+            .sweets4-p {
+                width: 50%;
+                padding: 30px;
+            }
+
+            .allcakes-wrap {
+                display: flex;
+
+            }
+
+            .allcakes-wrap {
+                padding-bottom: 20%;
+            }
+
+            .cake-wrap {
+                width: 33.33%;
+            }
+
+            .cake-img-wrap {
+                padding: 0 10%;
+            }
+
+            .cake-name {
+                padding: 30px 0 30px 0;
+            }
+
+            /* ----------------- */
+
+            .title {
+                height: 60vh;
+            }
+
+            .title-content {
+                width: 70%;
+                flex-direction: row;
+                align-items: center;
+
+            }
+
+            .title-left {
+                width: 30%;
+            }
+
+            .drink-title-right {
+                width: 70%;
+            }
+
+            .type-wrap {
+                display: flex;
+                align-items: center;
+            }
+
+            .type-img-wrap {
+                width: 50%;
+                padding-bottom: 0%;
+            }
+
+            .type-name {
+                width: 50%;
+            }
+
+            .type-content-wrap {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+            }
+
+            .introduce-img-wrap {
+                width: 50%;
+                padding-bottom: 0%;
+            }
+
+            .type-introduce {
+                width: 50%;
+                padding-right: 0%;
+            }
+
+            .drink-wrap {
+                display: flex;
+                justify-items: center;
+                align-items: center;
+            }
+
+            .drink-img-wrap {
+                width: 50%;
+            }
+
+            .drink-content {
+                width: 50%;
+            }
+
+            .drink-name {
+                font-size: 20px;
+                padding: 0px 0 40px 0;
+            }
+
+            .drink-introduce {
+                padding-right: 0%;
+                padding-bottom: 0%;
+                width: 200px;
+            }
+
+
+            .tea-content-wrap {
+                display: block;
+                transform: translateY(-100px);
+            }
+
+            .tea-introduce {
+                width: 300px;
+            }
+
+            /* ----------------- */
+            .about {
+                display: flex;
+            }
+
+            .shop {
+                width: 40%;
+            }
+
+            .info {
+                width: 60%;
+            }
+
+            .adderss-wrap,
+            .contact-wrap {
+                display: flex;
+            }
+
+            .address-content,
+            .contact-info {
+                padding-left: 0px;
+            }
+
+            .adderss,
+            .contact {
+                width: 150px;
+            }
+
+            .instagram{
+                display: flex;
+                align-items: center;
+            }
+
+            .ig-img-wrap{
+                width: 40%;
+            }
+
+            .ig-info-wrap{
+                width: 60%;
+            }
+
+            .ig-img{
+                transform: translateY(-200px);
+                /* margin: -200px 0 0 0; */
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="d-flex justify-content-between align-items-center">
+        <div class="nav-logo px-3">
+            <a href="#"> <img src="./images/s-240x400_8513fa3d-113c-480e-91aa-6e10f4a37684.svg" alt=""></a>
+        </div>
+
+        <!-- nav-btn大於sm消失 d-sm-none-->
+        <!--   -->
+        <div class="nav-btn d-sm-none d-flex flex-column align-items-center p-3 mr-3">
+            <img class="  " src="./images/s-15x15_718f3066-c6fb-4ae3-9875-4bb959b19b98.svg" alt="">
+            <p class="menu-p m-0">Menu</p>
+        </div>
+
+        <!-- nav-right大於sm顯示 -->
+        <!-- bs預設裡面mb有1rem，需要清除 -->
+        <div class="nav-right d-none d-sm-flex">
+            <ul class="d-flex list-unstyled mb-0 ">
+                <li class="li-text1 px-2"><a class=" " href="#">
+                    Top
+                    <div class="line1"></div>
+                </a></li>
+                <li class="li-text2 px-2"><a href="#">Story
+                    <div class="line1"></div>
+                </a></li>
+                <li class="li-text3 px-2"><a href="#">Sweets
+                    <div class="line1"></div>
+                </a></li>
+                <li class="li-text4 px-2"><a href="#">Drink
+                    <div class="line1"></div>
+                </a></li>
+                <li class="li-text5 px-2"><a href="#">Space / Service
+                    <div class="line1"></div>
+                    <div id="line5"></div>
+                </a></li>
+                <li class="li-text6 px-2"><a href="#">shop
+                    <div class="line1"></div>
+                </a></li>
+                <li class="li-text7 px-2"><a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="top position-relative">
+            <div class="top-wrap position-relative">
+
+                <!-- <img class="top-img w-100 "
+                    src="./images/s-2400x1552_v-frms_webp_64e0dcda-f270-46dd-8413-58ba7283e2f9_regular.webp" alt=""> -->
+
+                <div class="top-wrap-img">
+                    <img class="top-img "
+                        src="./images/s-2400x1552_v-frms_webp_64e0dcda-f270-46dd-8413-58ba7283e2f9_regular.webp" alt="">
+                </div>
+
+                <div class="top-wrap-fliter">
+                    <!-- <p class="top-p">上質を愉しむ、<br>大人のとっておき。</p> -->
+                </div>
+                <p class="top-p">上質を愉しむ、<br>大人のとっておき。</p>
+            </div>
+        </section>
+        <!-- 靠右 -->
+        <section class="story ">
+            <!-- story1 -->
+            <div class="story1-wrap">
+                <div class="story1-content d-flex flex-column ">
+                    <p class="story1-p1">The story of allée’s</p>
+                    <p class="mb-5">スイーツのしあわせを、<br>思いおもいのひとときに。</p>
+                </div>
+                <div class="story1-wrap-img">
+                    <img class="story1-img"
+                        src="./images/s-1680x1140_v-fms_webp_b9d6e00f-bf1e-4438-ae47-e615873392f3_middle.webp" alt="">
+                </div>
+
+            </div>
+
+            <!-- 影片 -->
+            <div class="video-wrap embed-responsive embed-responsive-16by9">
+                <video autoplay muted loop class="embed-responsive-item" src="./video/video.mp4" frameborder="0"
+                    allow=" autoplay"></video>
+
+                <p>Sweeten the moments.</p>
+
+                <!-- fliter -->
+                <div class="video-fliter"></div>
+            </div>
+
+            <!-- story2 -->
+            <div class="story2-wrap">
+                <div class="story2-wrap-img">
+                    <img class="story2-img"
+                        src="./images/s-1867x2400_v-frms_webp_20be04cf-762c-4b98-accd-535b189c12c7_middle.webp" alt="">
+                </div>
+
+                <div class="story2-content ">
+                    <p class="story2-p pb-0">路地のさき、静穏の灯り、甘い香り。<br>
+                        <br>
+                        素材の味を大切に、
+                        <br>
+                        一つひとつを
+                        <br>
+                        丁寧につくりあげる上質。
+                        <br>
+                        <br>
+                        流行にながされない、
+                        <br>
+                        ずっと愛される特別な定番。
+                        <br>
+                        それでいて、いつも新しい驚き。
+                        <br>
+                        <br>
+                        がんばった自分へのご褒美に、
+                        <br>
+                        友人とのおしゃべりのお供に、
+                        <br>
+                        大切な人へ贈るギフトに。
+                        <br>
+
+                        <br>
+                        <br>
+                        こころほどける、
+                        <br>
+                        甘美なスイーツを。
+                </div>
+            </div>
+
+        </section>
+
+        <section class="sweets">
+            <div class="sweets-title-1">
+                <div class="sweets-title-1-right ">
+                    <p class=" mb-0">Sweets</p>
+                    <p class=" mb-0">一</p>
+                </div>
+
+                <div class="sweets-title-1-left">
+                    <p class="mb-0">素材の味わいをシンプルに</p>
+                </div>
+
+
+            </div>
+
+            <div class="sweets-1">
+                <div class="sweets1-wrap-img ">
+                    <img class="w-100"
+                        src="./images/s-2400x1429_v-frms_webp_d8e0360c-8043-403c-81cc-3e481e34d233_regular.webp" alt="">
+                </div>
+
+                <div class="sweets1-h3">
+                    <h3 class="text-center mb-0">Crepe</h3>
+                </div>
+            </div>
+
+            <div class="sweets-2">
+                <div class="sweets2-wrap ">
+                    <div class="sweets2-img">
+                        <img class="w-100 "
+                            src="./images/s-1680x1260_v-fms_webp_73310501-b4bf-4886-8874-6b625920c792_middle.webp"
+                            alt="">
+                    </div>
+
+                    <div class="sweets2-p  ">
+                        <p class="mb-0">八丈島ジャージーバター、
+                            ひのき山農場の平飼い有精卵などの
+                            厳選素材に、蕎麦粉の香ばしさをプラス。
+                            トッピングは素材の味を引き立てる、
+                            シンプルなシュガーバターで。</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="sweets-3">
+                <div class="sweets3-wrap-img ">
+                    <img class="w-100" src="./images/s-2400x1429_v-frms_webp_87566d06-f37f-42ce-a983-3a31a23339a9.webp"
+                        alt="">
+                </div>
+                <div class="sweets3-h3">
+                    <h3 class="text-center mb-0">Basque <br> cheesecake</h3>
+                </div>
+
+            </div>
+
+            <div class="sweets-4">
+                <div class="sweets4-wrap ">
+                    <div class="sweets4-img ">
+                        <img class="w-100 "
+                            src="./images/s-1680x1260_v-fms_webp_8e3568a0-1257-4fcf-a031-fc9e05e388f6_middle.webp"
+                            alt="">
+                    </div>
+
+                    <div class="sweets4-p ">
+                        <p class="mb-0">八丈島ジャージーバター、
+                            ひのき山農場の平飼い有精卵などの
+                            厳選素材に、蕎麦粉の香ばしさをプラス。
+                            トッピングは素材の味を引き立てる、
+                            シンプルなシュガーバターで。</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sweets-title-2">
+                <div class="title-2-img-wrap">
+                    <img class="title-2-img"
+                        src="./images/s-2400x1600_v-frms_webp_b2d7a0f7-3c5c-4c76-938f-8c579bf31dfc.webp" alt="">
+
+                    <div class="title-2-img-fliter"></div>
+                </div>
+
+                <div class="title-2-h3">
+                    <div>一つひとつを丁寧に</div>
+                </div>
+
+            </div>
+
+            <div class="cakes">
+                <div class="allcakes-wrap">
+                    <div class="cake-wrap">
+                        <div class="cake-img-wrap ">
+                            <img class="width-100"
+                                src="./images/s-1050x1050_v-fs_webp_850258ce-e241-4524-b87d-6c858701b635_small.webp"
+                                alt="">
+                        </div>
+                        <div class="cake-content">
+                            <div class="cake-name">
+                                <div class="">
+                                    Chou à la crème
+                                </div>
+                            </div>
+                            <div class="cake-introduce">
+                                <div>
+                                    香ばしく焼き上げたシュー皮に、発酵バターを加えたカスタードクリームをたっぷりと。オーダー後に詰めるので食感もサクサク。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cake-wrap">
+                        <div class="cake-img-wrap ">
+                            <img class="width-100"
+                                src="./images/s-1050x1050_v-fs_webp_821232e2-398f-4d91-bc13-7d4f84c0a671.webp" alt="">
+                        </div>
+                        <div class="cake-content">
+                            <div class="cake-name">
+                                <div class="">
+                                    Fruit tart
+                                </div>
+                            </div>
+                            <div class="cake-introduce">
+                                <div>
+                                    旬のフルーツと濃厚なカスタードクリームを贅沢に使った、色とりどりの輝き、華やかな味わい。見た目も美しいこだわりのタルト。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cake-wrap">
+                        <div class="cake-img-wrap ">
+                            <img class="width-100"
+                                src="./images/s-1050x1050_v-fs_webp_c35da20f-da8d-4a44-ae82-1bcc8ab0e891.webp" alt="">
+                        </div>
+                        <div class="cake-content">
+                            <div class="cake-name">
+                                <div class="">
+                                    Demi sec / Fours secs
+                                </div>
+                            </div>
+                            <div class="cake-introduce">
+                                <div>
+                                    燻製はちみつのマドレーヌ、食感が楽しいショートブレッド、しっとりバナナマフィンなど。素材の風味が広がる上質な定番も。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="drink">
+            <div class="title">
+
+                <div class="title-content">
+                    <div class="title-left">
+                        <div class="title-name">Drink</div>
+                        <div class="title-style"></div>
+                    </div>
+
+                    <div class="drink-title-right">香り豊かな至福の一杯を</div>
+                </div>
+
+            </div>
+
+            <div class="coffee types pd-20">
+                <div class="type-wrap">
+                    <div class="type-img-wrap">
+                        <img class="width-100"
+                            src="images/s-2400x1429_v-frms_webp_d4530f0e-826a-4987-a253-919224926244_regular.webp"
+                            alt="">
+                    </div>
+                    <div class="type-name">Coffee</div>
+                </div>
+
+                <div class="type-content">
+                    <div class="type-content-wrap">
+                        <div class="introduce-img-wrap">
+                            <img class="width-100"
+                                src="images/s-1680x1260_v-fms_webp_4ed4ea64-8456-49b5-8843-ac2887c6d73c_middle.webp"
+                                alt="">
+                        </div>
+
+                        <div class="type-introduce">
+                            <div class="type-introduce-wrap">
+                                UNLIMITED COFFEE ROASTERSの、
+                                スペシャルティコーヒーの酸味と甘味。
+                                ドリップ式と浸漬式の良さをもつ器具
+                                “シルバートン”で、豆の個性を
+                                余すところなく抽出する芳醇な一杯。
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="drink-wrap">
+                    <div class="drink-img-wrap">
+                        <img class="width-100"
+                            src="./images/s-1260x1260_v-fms_webp_f76d3078-cb57-4a80-be3c-95cd17054847_middle.webp"
+                            alt="">
+                    </div>
+                    <div class="drink-content ">
+                        <div class="drink-name">
+                            <div>
+                                Milk brew
+                            </div>
+                        </div>
+                        <div class="drink-introduce">
+                            <div>
+                                コーヒーをミルクに浸漬させ
+                                時間をかけてゆっくりと抽出。
+                                フルーティさと甘さが溶け合った
+                                マイルドで上品な味わい。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tea types pd-20">
+                <div class="type-wrap row-re">
+                    <div class="type-img-wrap">
+                        <img class="width-100"
+                            src="./images/s-2400x1429_v-frms_webp_d2de4093-0859-4442-8f77-85ac4a855f6c.webp" alt="">
+                    </div>
+                    <div class="type-name">Tea</div>
+                </div>
+
+                <div class="type-content">
+                    <div class="tea-content-wrap type-content-wrap">
+
+                        <div class="tea-introduce type-introduce ">
+                            <div class="type-introduce-wrap">
+                                オリジナルのブレンドティーをはじめ
+                                新芽を使った旬のプレミアムティー、
+                                果実や花のフレーバードティーなど。
+                                The Tea companyがセレクトした
+                                香り高い紅茶と、安らぎのひとときを。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="drink-wrap">
+                    <div class="drink-img-wrap">
+                        <img class="width-100"
+                            src="./images/s-1680x1260_v-fms_webp_e9da2740-8f0a-4063-9a1e-f6a45207114c_.webp" alt="">
+                    </div>
+                    <div class="drink-content">
+                        <div class="drink-name">
+                            <div class="">
+                                Herb tea 睡蓮</span>
+                            </div>
+                        </div>
+                        <div class="drink-introduce">
+                            <div>
+                                太陽のめぐみを受けて育った
+                                ハイビスカスやローズヒップの酸味に
+                                ラベンダーとペパーミントが香る。
+                                爽やかな風味に、気持ちリフレッシュ。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="about">
+            <div class="shop">
+                <div class="fs-18">Shop</div>
+                <div class="shop-style"></div>
+            </div>
+
+            <div class="info">
+                <div class="name">allée <span class="name-sm">-アレ-</span></div>
+
+                <div class="adderss-wrap ">
+                    <div class="adderss fs-18">Address</div>
+
+                    <div class="address-content">
+                        <div class="address-info">
+                            〒107-0061 <br>
+                            東京都港区北青山3-5-23 <br>
+                            NOI Omotesando 1F
+                        </div>
+                        <a class="addlink" href="#">Google Mapで見る</a>
+                    </div>
+                </div>
+
+                <div class="contact-wrap">
+                    <div class="contact fs-18">Contact Us</div>
+
+                    <div class="contact-info">
+                        <div class="number">Tel&Fax / 03-5843-1503</div>
+
+                        <a href="mailto:allee@funandco.jp" rel="noopenter" target="_blank">allee@funandco.jp</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="instagram">
+            <div class="ig-img-wrap">
+                <img class="ig-img width-100" src="./images/s-1260x1890_v-frms_webp_d777f1a2-d4cd-464e-a9c0-c65406ccbb96.webp"
+                    alt="">
+            </div>
+
+            <div class="ig-info-wrap">
+                <div class="ig-info">
+                    <div class="ig-p">Instagramでalléeの情報をお届けしています</div>
+    
+                    <a class="ig-link" href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div class="link-p">Instagram</div>
+                    </a>
+                </div>
+            </div>               
+        </div>
+
+        <div class="button-logo">
+            <div class="logo-wrap ">
+                <img class="logo" src="images/s-240x400_8513fa3d-113c-480e-91aa-6e10f4a37684.svg" alt="">
+            </div>
+            <div class="pb-20 ">allée</div>
+            <div class="pb-20 ">&copy; 2022 allée </div>
+        </div>
+    </footer>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script> -->
+
+    <script>
+        // console.log('li-width：',$('.li-text5').width());
+ 
+        // const li =  $('.li-text5').width();
+
+        // var style{
+        //     backgroundColor:white,
+        // }
+
+
+        // $('.li-text5').hover(function(){
+        //     console.log('li-width：',$('.li-text5').width());
+
+        //     $('#line5').css({"background-color":"#FFF"},{"width":"30px"},{"height":"1px"});
+
+        //     $('#line5').css({"background-color":"white"})
+
+        // })
+
+    </script>
+</body>
+
+</html>
