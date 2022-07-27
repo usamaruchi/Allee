@@ -1,0 +1,10 @@
+:root {
+    /* font-color */
+    --font-color: #fff;
+
+
+    
+    --bg-glinear-gradient-01: linear-gradient(110deg, #6d311d 22%, #664a29 55%, #41342b 90%)no-repeat;
+    --bg-glinear-gradient-02: linear-gradient(290deg, #6d311d 22%, #664a29 55%, #41342b 90%)no-repeat;
+
+}
