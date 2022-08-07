@@ -122,16 +122,24 @@ header {
 /* Video */
 .video {
     position: relative;
+    width: 100%;
 }
 
 .video_container {
     position: fixed;
+    display: flex;
+    justify-content: center;
     z-index: -2;
+    background: #41342b;
+    padding: 0 5%;
+}
+
+.video  .video_container  video{
+    width: 100%;
 }
 
 /* Top */
 .top {
-    /* height: 100vh; */
     background: var(--bg-linear-gradient-01);
 }
 
@@ -181,40 +189,45 @@ header {
 /* Stroy */
 .stroy {
     width: 100%;
-    height: 300vh;
 }
 
-.stroy .story_info_container {
-    display: flex;
-    justify-content: flex-end;
+.stroy .title_wrap{
+    padding: 180px 0px;
     background: linear-gradient(290deg, #6d311d 22%, #664a29 53%, #41342b 88%);
-    padding: 180px 0;
+    display: flex;
+    justify-content: end;
 }
 
-.story_info_container .info_container {
+.stroy .title_container {
+    display: flex;
+    justify-content: center;
+    padding: 0 150px
+}
+
+.title_container .info {
     padding: 160px 0;
-    width: 45%;
+    width: 50%;
 }
 
-.story_info_container .info_container .info {
+.title_container .info .info_container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.info_container .info .small_title .small_title {
+.info .info_container .small_title .small_title {
     display: flex;
     flex-direction: column;
 }
 
-.info_container .info .small_title span {
+.info .info_container .small_title span {
     font-weight: 100;
     letter-spacing: var(--letter-spacing);
     line-height: 1.5;
 }
 
-.info_container .info .small_title .line {
+.info .info_container .small_title .line {
     margin-top: 20px;
     width: 20px;
     height: 1px;
@@ -222,19 +235,18 @@ header {
 }
 
 
-.story_info_container .info_container .info p {
+.title_container .info .info_container p {
     font-size: 1.1rem;
     letter-spacing: 5px;
     line-height: 3;
     font-weight: 200;
 }
 
-.stroy .story_info_container img {
-    padding-right: 50px;
-    width: 45%;
+.stroy .title_container img {
+    width: 50%;
 }
 
-.stroy .title {
+.stroy .slogan {
     height: 80vh;
     width: 100%;
     display: flex;
@@ -242,15 +254,21 @@ header {
     align-items: center;
 }
 
-.stroy .title h3 {
+.stroy .slogan h3 {
     font-size: 1.4rem;
     letter-spacing: var(--letter-spacing);
     font-weight: 200;
 }
 
+.stroy .content{
+    width: 100%;
+}
+
 .stroy .bg_filter {
     background: linear-gradient(rgba(65, 52, 43, 0) 5%, rgba(65, 52, 43, 0.9) 36%);
 }
+
+
 
 /* RWD Middle Mode */
 @media screen and (max-width: 840px) {
