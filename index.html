@@ -37,6 +37,7 @@
             padding-bottom: 20%;
         }
 
+
         /* ------------------------------------------ */
 
         header {
@@ -231,6 +232,7 @@
         .sweets-2,
         .sweets-4 {
             background-color: #41342b;
+
         }
 
         .sweets p {
@@ -348,6 +350,12 @@
             z-index: 1;
         }
 
+        .cakes{
+            position: relative;
+        }
+
+   
+
         .allcakes-wrap {
             color: #FFF;
             background-color: #41342b;
@@ -381,14 +389,14 @@
 
         .title {
             background: linear-gradient(240deg, #6d311d 22%, #664a29 55%, #41342b 90%);
-            width: 100%;
+            /* width: 100%;
             height: 30vh;
 
             display: flex;
             justify-content: center;
 
             font-size: 16px;
-            color: #FFF;
+            color: #FFF; */
 
         }
 
@@ -615,6 +623,10 @@
                 height: 20vh;
             }
 
+            .header{
+            padding: 0 50px;
+            }
+
             .nav-logo img {
                 height: 60px;
             }
@@ -633,8 +645,13 @@
             }
 
             /* ----------------------- */
+            .story1-img,
+            .story2-img {
+                width: 80%;
+            }
 
             .story1-wrap {
+                padding: 150px  80px;
                 justify-content: start;
 
             }
@@ -652,14 +669,37 @@
                 display: flex;
                 flex-wrap: nowrap;
                 width: 100%;
+                padding: 150px 80px;
                 /* height: 500px; */
                 /* object-fit: cover; */
             }
 
+            .story2-content {
+            width: 90%;
+            padding: 150px 50px;
+
+            }
+
             /* ---------------- */
+
+            .sweets-1,
+            .sweets-3,
+            .sweets-2,
+            .sweets-4 {
+                background-color: #41342b;
+                padding: 150px 80px;
+            }
+
+            .sweets2-p,
+            .sweets4-p{
+                padding:0px 150px;
+            }
+
+
             .sweets-title-1 {
                 flex-direction: row;
                 align-items: center;
+                padding: 0px 80px
             }
 
             .sweets-title-1-right {
@@ -705,9 +745,8 @@
                 padding-bottom: 0;
             }
 
-            .sweets2-p {
+            .sweets2-p{
                 width: 50%;
-                padding: 30px;
             }
 
             .sweets-3 {
@@ -746,7 +785,7 @@
 
             .sweets4-p {
                 width: 50%;
-                padding: 30px;
+                /* padding: 30px; */
             }
 
             .allcakes-wrap {
@@ -755,7 +794,7 @@
             }
 
             .allcakes-wrap {
-                padding-bottom: 20%;
+                padding: 150px 80px;
             }
 
             .cake-wrap {
@@ -773,11 +812,11 @@
             /* ----------------- */
 
             .title {
-                height: 60vh;
+                /* height: 60vh; */
             }
 
             .title-content {
-                width: 70%;
+                /* width: 70%; */
                 flex-direction: row;
                 align-items: center;
 
@@ -794,6 +833,7 @@
             .type-wrap {
                 display: flex;
                 align-items: center;
+                padding: 150px 80px;
             }
 
             .type-img-wrap {
@@ -818,8 +858,11 @@
 
             .type-introduce {
                 width: 50%;
-                padding-right: 0%;
+                /* padding-right: 0%; */
+                padding: 0 150px;
             }
+
+
 
             .drink-wrap {
                 display: flex;
@@ -849,11 +892,13 @@
 
             .tea-content-wrap {
                 display: block;
-                transform: translateY(-100px);
+                transform: translateY(-300px);
+                /* padding: 0;
+                margin: 0; */
             }
 
             .tea-introduce {
-                width: 300px;
+                width: 350px;
             }
 
             /* ----------------- */
@@ -900,6 +945,7 @@
             .ig-img{
                 transform: translateY(-200px);
                 /* margin: -200px 0 0 0; */
+                /* padding: 0 80px; */
             }
 
         }
@@ -908,7 +954,7 @@
 </head>
 
 <body>
-    <header class="d-flex justify-content-between align-items-center">
+    <header class="d-flex justify-content-between align-items-center header">
         <div class="nav-logo px-3">
             <a href="#"> <img src="./images/s-240x400_8513fa3d-113c-480e-91aa-6e10f4a37684.svg" alt=""></a>
         </div>
@@ -1047,8 +1093,6 @@
                 <div class="sweets-title-1-left">
                     <p class="mb-0">素材の味わいをシンプルに</p>
                 </div>
-
-
             </div>
 
             <div class="sweets-1">
@@ -1102,11 +1146,11 @@
                     </div>
 
                     <div class="sweets4-p ">
-                        <p class="mb-0">八丈島ジャージーバター、
-                            ひのき山農場の平飼い有精卵などの
-                            厳選素材に、蕎麦粉の香ばしさをプラス。
-                            トッピングは素材の味を引き立てる、
-                            シンプルなシュガーバターで。</p>
+                        <p class="mb-0">ONE DROP FARMの燻製はちみつ、
+                            ひのき山農場の平飼い有精卵を使って。
+                            高温でさっと焼き上げれば
+                            外側と内側で異なるしっとり食感、
+                            コクのある味わい、燻製の香り。</p>
                     </div>
                 </div>
 
@@ -1122,11 +1166,13 @@
 
                 <div class="title-2-h3">
                     <div>一つひとつを丁寧に</div>
+                    
                 </div>
-
+                
             </div>
 
             <div class="cakes">
+                
                 <div class="allcakes-wrap">
                     <div class="cake-wrap">
                         <div class="cake-img-wrap ">
@@ -1192,7 +1238,18 @@
         </section>
 
         <section class="drink">
-            <div class="title">
+            <div class="title sweets-title-1">
+                <div class="sweets-title-1-right ">
+                    <p class=" mb-0">Drink</p>
+                    <p class=" mb-0">一</p>
+                </div>
+
+                <div class="sweets-title-1-left">
+                    <p class="mb-0">香り豊かな至福の一杯を</p>
+                </div>
+            </div>
+
+            <!-- <div class="title">
 
                 <div class="title-content">
                     <div class="title-left">
@@ -1203,7 +1260,7 @@
                     <div class="drink-title-right">香り豊かな至福の一杯を</div>
                 </div>
 
-            </div>
+            </div> -->
 
             <div class="coffee types pd-20">
                 <div class="type-wrap">
@@ -1272,8 +1329,8 @@
                 <div class="type-content">
                     <div class="tea-content-wrap type-content-wrap">
 
-                        <div class="tea-introduce type-introduce ">
-                            <div class="type-introduce-wrap">
+                        <div class="tea-introduce tea_content">
+                            <div class="">
                                 オリジナルのブレンドティーをはじめ
                                 新芽を使った旬のプレミアムティー、
                                 果実や花のフレーバードティーなど。
